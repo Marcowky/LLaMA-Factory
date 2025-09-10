@@ -25,7 +25,7 @@ dataloader_num_workers: 4
 ### output
 output_dir: saves/qwen2_5vl-7b-weatherrft_500hpa_situation/full/sft
 logging_steps: 1
-save_steps: 20
+save_steps: 15
 save_total_limit: 3
 plot_loss: true
 overwrite_output_dir: true
@@ -36,7 +36,7 @@ report_to: wandb  # choices: [none, wandb, tensorboard, swanlab, mlflow]
 per_device_train_batch_size: 4
 gradient_accumulation_steps: 8
 learning_rate: 1.0e-5
-num_train_epochs: 8
+num_train_epochs: 2
 lr_scheduler_type: cosine
 warmup_ratio: 0.1
 bf16: true
@@ -47,4 +47,4 @@ resume_from_checkpoint: null
 eval_dataset: weatherrft_val
 per_device_eval_batch_size: 8
 eval_strategy: steps
-eval_steps: 20
+eval_steps: 15
